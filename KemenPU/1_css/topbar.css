@@ -1,0 +1,41 @@
+/* ===================== TOPBAR ===================== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 18px 50px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar h1 {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.topbar ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 10px 15px; /* tambahkan jarak antar menu */
+}
+.topbar a:hover,
+
+.topbar a.active {
+  color: #ffd86f;
+  border-bottom: 2px solid #ffd86f;
+  padding-bottom: 3px;
+}

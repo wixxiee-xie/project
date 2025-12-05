@@ -1,0 +1,25 @@
+        .main-content {margin-left:260px; padding:30px; width:calc(100% - 260px);}
+        header {display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;}
+        .dark-toggle {
+            background:#1565c0; color:white; border:none; border-radius:8px;
+            padding:8px 14px; cursor:pointer;
+        }
+        .dark-toggle:hover {background:#0d47a1;}
+        .insight-cards {
+            display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px; margin-bottom:40px;
+        }
+        .card {
+            background:white; border-radius:14px; padding:20px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.08); transition:0.3s;
+        }
+        .dark .card {background:#2c2c3a;}
+        .card h3 {font-size:15px; margin-bottom:8px; color:#1976d2;}
+        .card p {font-size:26px; font-weight:600;}
+        .card small {color:gray;}
+        .chart-container {
+            background:white; border-radius:14px; padding:25px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.08);
+        }
+        .dark .chart-container {background:#2c2c3a;}
+        canvas {max-height:320px;}

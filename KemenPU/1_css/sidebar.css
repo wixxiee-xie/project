@@ -1,0 +1,96 @@
+/* === SIDEBAR UTAMA === */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: #05128b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* === JUDUL === */
+.sidebar h2 {
+  text-align: center;
+  margin: 30px 0;
+  font-weight: 600;
+  letter-spacing: 5px;
+  position: relative;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* === MENU === */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 8px 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #1565c0;
+  padding-left: 28px;
+}
+
+/* === TOGGLE BUTTON (TENGAH) === */
+.sidebar-toggle {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 60px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1100;
+}
+
+.sidebar-toggle:hover {
+  background-color: #125aa1;
+}
+
+/* === COLLAPSED MODE === */
+.sidebar.collapsed {
+  transform: translateX(-200px);
+}
+
+.sidebar.collapsed .sidebar-toggle {
+  right: -10px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  margin-left: 240px;
+  padding: 30px;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+  margin-left: 40px; /* agar konten tetap sejajar rapi ketika sidebar tertutup */
+}
